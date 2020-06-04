@@ -29,10 +29,16 @@ features_train, features_test, labels_train, labels_test = preprocess()
 # create classifier
 clf = gnb()
 
+t0 = time()
+
 # fit the classifier on the training features and labels
 clf.fit(features_train, labels_train)
 
-clf.score(features_test, labels_test)
+print "training time:", round(time() - t0, 3), "s"
+
+accuracy = clf.score(features_test, labels_test)
+
+print(accuracy)
 
 
 #########################################################
