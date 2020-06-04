@@ -1,14 +1,13 @@
 #!/usr/bin/python
 
-""" 
-    This is the code to accompany the Lesson 1 (Naive Bayes) mini-project. 
+# This is the code to accompany the Lesson 1 (Naive Bayes) mini-project.
 
-    Use a Naive Bayes Classifier to identify emails by their authors
-    
-    authors and labels:
-    Sara has label 0
-    Chris has label 1
-"""
+# Use a Naive Bayes Classifier to identify emails by their authors
+
+# authors and labels:
+# Sara has label 0
+# Chris has label 1
+
 import sys
 
 sys.path.append("../tools/")
@@ -16,8 +15,6 @@ sys.path.append("../tools/")
 from sklearn.naive_bayes import GaussianNB as gnb
 from email_preprocess import preprocess
 from time import time
-
-
 
 
 # features_train and features_test are the features for the training
