@@ -17,6 +17,14 @@
 
 import pickle
 
-enron_data = pickle.load(open("../final_project/final_project_dataset.pkl", "rb"))
+enron_data = pickle.load(
+    open("../final_project/final_project_dataset.pkl", "rb"))
 
+print(len(enron_data))
 
+print(len(enron_data["SKILLING JEFFREY K"].keys()))
+
+pois = {name: features for (name, features)
+        in enron_data.items() if features['poi'] == 1}
+
+print('poi', len(pois))
